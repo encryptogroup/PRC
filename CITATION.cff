@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+title: >-
+  Do You Need a Receipt? Anonymous Credential Revocation at
+  Continental Scale via Private Record Certification
+message: >-
+  If you use this artifact, please cite the associated
+  USENIX Security 2026 paper and this software artifact.
+type: software
+authors:
+  - family-names: EdalatNejad
+    given-names: Kasra
+    affiliation: 'Technical University of Darmstadt, Germany'
+    email: edalat@encrypto.cs.tu-darmstadt.de
+    orcid: 'https://orcid.org/0009-0007-8448-1540'
+  - family-names: Faust
+    given-names: Sebastian
+    affiliation: 'Technical University of Darmstadt, Germany'
+    email: sebastian.faust@tu-darmstadt.de
+    orcid: 'https://orcid.org/0000-0002-8625-4639'
+  - family-names: Hofmann
+    given-names: Jonas
+    affiliation: 'Technical University of Darmstadt, Germany'
+    email: jonas.hofmann1@tu-darmstadt.de
+    orcid: 'https://orcid.org/0009-0002-7411-3561'
+  - family-names: Lehwalder
+    given-names: Philipp-Florens
+    affiliation: 'Technical University of Darmstadt, Germany'
+    email: philipp-florens.lehwalder@tu-darmstadt.de
+    orcid: 'https://orcid.org/0009-0009-2559-7134'
+  - family-names: Schneider
+    given-names: Thomas
+    affiliation: 'Technical University of Darmstadt, Germany'
+    email: schneider@encrypto.cs.tu-darmstadt.de
+    orcid: 'https://orcid.org/0000-0001-8090-1316'
+repository-code: 'https://github.com/encryptogroup/PRC'
+abstract: >-
+  This artifact contains a prototype implementation of
+  Private Record Certification (PRC)
+license: BSD-3-Clause
+version: 0.2.0
