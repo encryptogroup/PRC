@@ -1,18 +1,22 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20433788.svg)](https://doi.org/10.5281/zenodo.20433788)
+
 # Private Record Certifier
+
 This repository contains a prototype implementation of **Private Record Certification (PRC)**, a primitive introduced in:
 
 > Kasra EdalatNejad, Sebastian Faust, Jonas Hofmann, Philipp-Florens Lehwalder, Thomas Schneider.  
 > *Do You Need a Receipt? Anonymous Credential Revocation at Continental Scale via Private Record Certification*.  
 > USENIX Security 2026.
 >
-> **Abstract:** 
-> A key challenge in digital credential systems is revocation, that is, the ability to invalidate credentials post-issuance and verify their status upon presentation.
-While anonymous credentials enhance privacy over classical credentials (e.g., by providing unlinkability), they complicate revocation.
-Existing revocation schemes for anonymous credentials often suffer from high client or verifier computation, long delays before revocation takes effect (e.g., epoch-based settings), or require updates to all users with each revocation.
-> We present an efficient, real-time revocation system for anonymous credentials with decentralized revocation authorities based on a novel primitive called *Private Record Certification (PRC)*.
-PRC enables users to obtain a certificate for a record stored in a server-managed database without the servers learning which record was requested. This primitive is of independent interest, and we construct it by combining techniques from private information retrieval and secure multi-party computation.
-Our revocation scheme outsources its computation to the revocation authorities and has minimal overhead for clients and verifiers, while ensuring the communication costs are sublinear in the number of credentials.
-We build a prototype and demonstrate that our system achieves sub-second real-time latency for PRC requests, at a scale of over *1 billion* credentials, with an online operational cost of 2.5$ per server for processing *1 million* PRC requests.
+> @inproceedings{EFHLS26,
+>  author = {Kasra Edalatnejad and Sebastian Faust and Jonas Hofmann and Philipp-Florens Lehwalder and Thomas Schneider},
+>  title = {{Do You Need a Receipt? Anonymous Credential Revocation at Continental Scale via Private Record Certification}},
+>  booktitle = {35. {USENIX} Security Symposium ({USENIX} Security'26)},
+>  year = {2026},
+>  month = {August 12-14,},
+>  publisher = {USENIX},
+>  note = {\url{https://ia.cr/2026/1189}. Code: \url{https://encrypto.de/code/PRC}}
+>}
 
 **⚠️ Warning:** This is an academic research prototype. It has not been hardened or audited and is not suitable for production use.
 
@@ -235,6 +239,7 @@ Besides the modules, we also provide:
 
 - **`measurements`**: Contains the raw benchmark data and plotting scripts used to generate the evaluation figures.
   - *`measurements/raw data/`*: Contains the raw measurements used to generate the plots in the paper.
+  - *`measurements/README.md`*: Describes how we measure the performance of the naive PIR solution and ALLOSAUR, and how we extrapolate measurements to generate the plots in the paper.
   - *`measurements/bench.sh`*: An script to run n PRC servers and gather measurements.
   - *`measurements/PRC_plots.py`*: Generates the PRC benchmark plots from the raw measurements (Figure 3).
   - *`measurements/PIR_comparison_plot.py`*: Generates the PIR-baseline comparison plot (Figure 4).
@@ -274,7 +279,7 @@ The paper also makes the following client-side claims, which are not directly sh
 
 
 **Out of scope:** 
-This artifact does not fully reproduce Figure 4 end-to-end: the paper's comparison relies on external related-work implementations, which are not repackaged in this repository. We instead provide our measurements, the recorded comparison data, and `measurements/PIR_comparison_plot.py`, allowing reviewers to regenerate the plot but not rerun the external systems.
+This artifact does not reproduce Figure 4 end-to-end. The comparison in the paper relies on external related-work implementations, which are not repackaged in this repository. Instead, `measurements/README.md` describes how we ran those external packages and how we extrapolated measurements for settings beyond their scalability limits. We also provide our measurements, the recorded comparison data, and the plotting scripts needed to regenerate Figure 4 without rerunning the external systems.
 
 ## AI use
 We have used LLM-based tools mainly for polishing, refactoring, and expanding test coverage. The output of AI tools has been manually checked and verified.

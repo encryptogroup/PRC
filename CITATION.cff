@@ -5,6 +5,7 @@ title: >-
 message: >-
   If you use this artifact, please cite the associated
   USENIX Security 2026 paper and this software artifact.
+  @inproceedings{EFHLS26, author = {Kasra Edalatnejad and Sebastian Faust and Jonas Hofmann and Philipp-Florens Lehwalder and Thomas Schneider}, title = {{Do You Need a Receipt? Anonymous Credential Revocation at Continental Scale via Private Record Certification}}, booktitle = {35. {USENIX} Security Symposium ({USENIX} Security'26)}, year = {2026}, month = {August 12-14,}, publisher = {USENIX}, note = {\url{https://ia.cr/2026/1189}. Code: \url{https://encrypto.de/code/PRC}}
 type: software
 authors:
   - family-names: EdalatNejad
